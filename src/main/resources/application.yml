@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: csvParsingToDb
+
+  batch:
+    jdbc:
+      initialize-schema: always
+
+health:
+  csv-path: classpath:data/health.csv
