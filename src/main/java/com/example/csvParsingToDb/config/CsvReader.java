@@ -21,8 +21,9 @@ public class CsvReader {
     public FlatFileItemReader<HealthCsvData> csvScheduleReader() {
         FlatFileItemReader<HealthCsvData> flatFileItemReader = new FlatFileItemReader<>();
         flatFileItemReader.setResource(new ClassPathResource("health.csv"));
-        flatFileItemReader.setEncoding("UTF-8");
+        flatFileItemReader.setEncoding("EUC-KR");
         flatFileItemReader.setRecordSeparatorPolicy(new DefaultRecordSeparatorPolicy());
+        flatFileItemReader.setLinesToSkip(1);
 
         DefaultLineMapper<HealthCsvData> defaultLineMapper = new DefaultLineMapper<>();
         DelimitedLineTokenizer delimitedLineTokenizer = new DelimitedLineTokenizer();
