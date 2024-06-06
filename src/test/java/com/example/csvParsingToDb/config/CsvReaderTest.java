@@ -12,7 +12,7 @@ class CsvReaderTest {
     @Test
     public void csv_파일이_정상적으로_존재한다() {
         try {
-            ClassPathResource resource = new ClassPathResource("data/health.csv");
+            ClassPathResource resource = new ClassPathResource("health.csv");
             assertTrue(resource.exists(), "CSV 파일이 존재해야 합니다.");
 
             BufferedReader br = new BufferedReader(new InputStreamReader(resource.getInputStream()));

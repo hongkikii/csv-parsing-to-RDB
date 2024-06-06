@@ -11,18 +11,16 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.io.ClassPathResource;
+import org.springframework.core.io.FileSystemResource;
 
 @Configuration
 @RequiredArgsConstructor
 public class CsvReader {
 
-    @Value("${health.csv-path}")
-    private String healthCsv;
-
     @Bean
     public FlatFileItemReader<HealthCsvData> csvScheduleReader() {
         FlatFileItemReader<HealthCsvData> flatFileItemReader = new FlatFileItemReader<>();
-        flatFileItemReader.setResource(new ClassPathResource(healthCsv));
+        flatFileItemReader.setResource(new ClassPathResource("health.csv"));
         flatFileItemReader.setEncoding("UTF-8");
         flatFileItemReader.setRecordSeparatorPolicy(new DefaultRecordSeparatorPolicy());
 
