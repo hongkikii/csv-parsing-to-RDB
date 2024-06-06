@@ -1,8 +1,3 @@
-## 문제 정의
-- 국민건강보험공단에서 제공하는 건강검진정보 CSV 파일을 파싱해서 MySQL에 저장하기
-- Data(Row) 개수 : 100만건
-- Column 개수 : 30개
+## 문제 해결 과정 기록
 
-## 구현
-
-## 성능
+https://false-challenge-ba9.notion.site/CSV-DB-e23dfb86e7f843af99efe0e200354949
